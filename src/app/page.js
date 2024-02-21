@@ -1,9 +1,11 @@
+import Checks from "@/components/Checks";
 import Notification from "@/components/Notification";
 
 export default function Home() {
   return (
-    <main>
+    <main className="m-4">
       <Notification />
+      <Checks />
     </main>
   );
 }
