@@ -15,6 +15,7 @@ export default async function RootLayout({ children }) {
   await flagsmith.init({
     environmentID: process.env.NEXT_PUBLIC_FLAGSMITH_ID,
   });
+  await flagsmith.identify(123, { email: "eddie@eddiehub.org" });
   const serverState = flagsmith.getState();
   console.log(serverState);
   return (
